@@ -34,6 +34,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Deploy ke staging via SSH
+      uses: appleboy/ssh-action@v1.2.1
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
